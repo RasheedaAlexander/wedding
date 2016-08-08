@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<header>
+  <img class="header" src="https://s-media-cache-ak0.pinimg.com/736x/6d/92/f5/6d92f5ce7226cecc5ddca8a716e996c8.jpg" alt="Wedding Image Header" />
+</header>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Wedding date</th>
+      <th>Img url</th>
+      <th>Budget</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.wedding_date %></td>
+        <td><%= image_tag user.img_url %></td>
+        <td><%= user.budget %></td>
+        <td><%= user.location %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
