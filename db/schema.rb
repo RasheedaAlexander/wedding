@@ -10,27 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808141122) do
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.date     "wedding_date"
-    t.string   "img_url"
-    t.integer  "budget"
-    t.string   "location"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "vendors", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "price"
-    t.string   "img_url"
-    t.string   "location"
-    t.string   "site_url"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
