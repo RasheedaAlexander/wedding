@@ -5,34 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-#data
-require_relative './vendor_data.rb'
-require_relative './user_data.rb'
-
 Vendor.destroy_all
-User.destroy_all
+Resort.destroy_all
 
-vendor_data = get_vendor_data()
-user_data = get_user_data()
 
-vendor_data.each_pair do |user_name, vendors|
-  info = user_data[user_name]
-  current_user = User.create!({
-    name:         info[:name],
-    wedding_date: info[:wedding_date],
-    img_url:      info[:img_url],
-    budget:       info[:budget],
-    location:     info[:location]
-    })
-
-    vendors.each do |vendor|
-      Vendor.create!({
-        name:         vendor[:name],
-        img_url:      vendor[:img_url],
-        location:     vendor[:location],
-        price:        vendor[:price],
-        user:         current_user
-        })
-      end
-    end
+divi_aruba = Resort.create(name: "Divi Aruba", price: 20000, img_url: "http://www.diviaruba.com/files/2757/h2.jpg", location: "Oranjestad, Aruba", site_url: "http://www.diviaruba.com/")

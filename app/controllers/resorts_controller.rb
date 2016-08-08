@@ -69,6 +69,6 @@ class ResortsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resort_params
-      params.fetch(:resort, {})
+      params.fetch(:resort).permit(:name, :price, :img_url, :location, :site_url, :user_id)
     end
 end

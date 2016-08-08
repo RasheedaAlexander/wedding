@@ -13,6 +13,12 @@
 ActiveRecord::Schema.define(version: 20160808182409) do
 
   create_table "resorts", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.string   "img_url"
+    t.string   "location"
+    t.string   "site_url"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

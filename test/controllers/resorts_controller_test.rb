@@ -17,7 +17,7 @@ class ResortsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create resort" do
     assert_difference('Resort.count') do
-      post resorts_url, params: { resort: {  } }
+      post resorts_url, params: { resort: { img_url: @resort.img_url, location: @resort.location, name: @resort.name, price: @resort.price, site_url: @resort.site_url, user_id: @resort.user_id  } }
     end
 
     assert_redirected_to resort_url(Resort.last)
@@ -34,7 +34,7 @@ class ResortsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update resort" do
-    patch resort_url(@resort), params: { resort: {  } }
+    patch resort_url(@resort), params: { resort: { img_url: @resort.img_url, location: @resort.location, name: @resort.name, price: @resort.price, site_url: @resort.site_url, user_id: @resort.user_id } }
     assert_redirected_to resort_url(@resort)
   end
 

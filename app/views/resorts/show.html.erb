@@ -1,3 +1,21 @@
 
+<h1><a href="http://www.diviaruba.com/"><%= @resort.name %></a></h1>
+
+<p>
+  <strong>Price:</strong> $<%= @resort.price %>
+</p>
+
+<%= image_tag @resort.img_url %>
+
+<p>
+  <strong>Location:</strong>
+  <%= @resort.location %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @resort.user_id %>
+</p>
+
 <%= link_to 'Edit', edit_resort_path(@resort) %> |
 <%= link_to 'Back', resorts_path %>
