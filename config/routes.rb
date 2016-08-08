@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :resorts
-  resources :vendors
+
+  resources :resorts do
+    resources :users
+  end
+  
+  resources :vendors do
+    resources :users
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
