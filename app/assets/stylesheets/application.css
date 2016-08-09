@@ -15,7 +15,7 @@
 */
 body{
   background-color: rgba(25,181,188, 0.8);
-  padding-top: 60px;
+  padding: 60px;
   margin: 0;
   overflow: auto;
 }

@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809142837) do
+ActiveRecord::Schema.define(version: 20160809205207) do
 
-  create_table "destination", id: false, force: :cascade do |t|
-    t.integer "resort_id"
-    t.integer "vendor_id"
-    t.integer "user_id"
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "resort_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resort_id"], name: "index_reservations_on_resort_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "resorts", force: :cascade do |t|
@@ -23,8 +26,6 @@ ActiveRecord::Schema.define(version: 20160809142837) do
     t.integer  "price"
     t.string   "img_url"
     t.string   "location"
-    t.string   "site_url"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,10 +52,10 @@ ActiveRecord::Schema.define(version: 20160809142837) do
     t.integer  "price"
     t.string   "img_url"
     t.string   "location"
-    t.string   "site_url"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_vendors_on_user_id"
   end
 
 end

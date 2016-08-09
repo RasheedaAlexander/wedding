@@ -1,6 +1,6 @@
 class Resort < ApplicationRecord
-  has_many :vendors
-  has_many :users
+  # has_many :vendors
+  has_many :reservations
+  has_many :users, through: :reservations
 
-  attr_accessor :user, :vendor
 end
