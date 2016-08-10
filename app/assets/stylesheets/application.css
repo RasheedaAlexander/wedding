@@ -15,28 +15,43 @@
 */
 body{
   background-color: rgba(25,181,188, 0.8);
-  padding: 60px;
+  padding: 60px 10px;
   margin: 0;
   overflow: auto;
 }
+ul.nav {
+  list-style-type: none;
+  padding-left: 0;
+}
 .header {
   width: 100%;
+  height: 500px;
+  border: solid 15px white;
+  box-sizing: border-box;
+  background-image: url("http://ourventuretravel.com/images/userfiles/EF5EB34B-EBB6-E411-8B9F-0050568E420D/images/49f6d305-14e0-4b4c-88b0-54aaafd63081(2).jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.row {
+  padding-bottom: 35px;
+}
+.col-md-4 {
+  text-align: center;
+  width: 30%;
+  display: inline-block;
   height: 350px;
-  border: solid 10px white;
+  margin: 0 15px;
   box-sizing: border-box;
 }
-thead {
-  text-align: left;
-}
-th {
-  padding: 20px;
-}
-tbody {
+.individual {
+  width: 50%;
   text-align: center;
-  padding: 20px;
+  margin: 0 auto;
 }
 img {
-  width: 50%;
+  width: 100%;
+  height: 300px;
   border: 5px solid white;
 }
 a {
