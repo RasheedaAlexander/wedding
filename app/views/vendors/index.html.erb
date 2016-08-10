@@ -8,7 +8,7 @@
   <% group.compact.each do |vendor| %>
   <div class="col-md-4">
     <h4><%= link_to vendor.name, vendor %></h4>
-      <%= image_tag vendor.img_url %>
+      <a href="<%= vendor.site_url %>"><%= image_tag vendor.img_url %></a>
     <%= vendor.location %>
   </div>
   <% end %>

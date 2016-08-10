@@ -5,7 +5,7 @@
     <strong>Price:</strong> $<%= @vendor.price %>
   </p>
 
-    <%= image_tag @vendor.img_url %>
+    <a href="<%= @vendor.site_url %>"><%= image_tag @vendor.img_url %></a>
   <p>
     <strong>Location:</strong>
     <%= @vendor.location %>

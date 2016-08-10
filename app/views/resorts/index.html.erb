@@ -9,7 +9,7 @@
   <% group.compact.each do |resort| %>
   <div class="col-md-4">
     <h4><%= link_to resort.name, resort %></h4>
-    <%= image_tag resort.img_url %>
+    <a href="<%= resort.site_url %>"><%= image_tag resort.img_url %></a>
   </div>
 
   <% end %>
