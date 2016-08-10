@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root 'resorts#index'
-
   devise_for :users
+
+  root to: 'resorts#index'
+  get '/vendors', to: 'vendors#index'
 
   resources :resorts do
     resources :users

@@ -1,3 +1,4 @@
+<div class="individual">
 
 <h1><a href="#"><%= @resort.name %></a></h1>
 
@@ -5,13 +6,19 @@
   <strong>Price:</strong> $<%= @resort.price %>
 </p>
 
-<%= image_tag @resort.img_url %>
+  <%= image_tag @resort.img_url %>
 
 <p>
   <strong>Location:</strong>
   <%= @resort.location %>
 </p>
 
+<h3>
+<%= link_to 'Vendors', vendor_path %>
+</h3>
+
+<br>
 
 <%= link_to 'Edit', edit_resort_path(@resort) %> |
 <%= link_to 'Back', resorts_path %>
+</div>

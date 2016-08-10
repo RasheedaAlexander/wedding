@@ -15,7 +15,7 @@
 */
 body{
   background-color: rgba(25,181,188, 0.8);
-  padding: 60px 10px;
+  padding-bottom: 10px;
   margin: 0;
   overflow: auto;
 }
@@ -23,10 +23,15 @@ ul.nav {
   list-style-type: none;
   padding-left: 0;
 }
+h1{
+  display: inline;
+}
 .header {
   width: 100%;
   height: 500px;
-  border: solid 15px white;
+  opacity: 0.85;
+  border-top: solid 15px white;
+  border-bottom: solid 15px white;
   box-sizing: border-box;
   background-image: url("http://ourventuretravel.com/images/userfiles/EF5EB34B-EBB6-E411-8B9F-0050568E420D/images/49f6d305-14e0-4b4c-88b0-54aaafd63081(2).jpg");
   background-size: cover;
@@ -34,7 +39,9 @@ ul.nav {
   background-repeat: no-repeat;
 }
 .row {
-  padding-bottom: 35px;
+  padding: 0 10px 35px 10px;
+  text-align: center;
+
 }
 .col-md-4 {
   text-align: center;
@@ -49,11 +56,26 @@ ul.nav {
   text-align: center;
   margin: 0 auto;
 }
+.single-vendor:hover {
+  opacity: 0.5;
+}
+.single-resort:hover {
+  opacity: 0.5;
+
+}
 img {
   width: 100%;
   height: 300px;
   border: 5px solid white;
 }
+
 a {
   color: white;
+}
+.pull-right {
+  text-align: right;
+  padding-right: 10px;
+}
+.email {
+  color: green;
 }

@@ -5,6 +5,7 @@ class CreateVendors < ActiveRecord::Migration[5.0]
       t.integer :price
       t.string :img_url
       t.string :location
+      t.string :site_url
       t.references :user
       t.timestamps
     end

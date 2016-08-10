@@ -1,17 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-  <h1>Resorts</h1>
+<h1>Resorts</h1>
+<h1> <%= link_to 'Vendors', vendors_path %></h1>
 
 
 <% @resorts.in_groups_of(3) do |group| %>
-  <div class="row">
-    <% group.compact.each do |resort| %>
-      <div class="col-md-4">
-        <h4><%= link_to resort.name, resort %></h4>
-        <%= image_tag resort.img_url%>
-        <br>
-        <%= resort.location %>
-      </div>
-    <% end %>
+<div class="row">
+  <% group.compact.each do |resort| %>
+  <div class="col-md-4">
+    <h4><%= link_to resort.name, resort %></h4>
+    <%= image_tag resort.img_url %>
   </div>
-<% end %>
+
+  <% end %>
+  <% end %>

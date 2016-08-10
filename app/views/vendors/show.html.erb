@@ -1,18 +1,20 @@
 <div class="individual">
-<h1><a href="#"><%= @vendor.name %></a></h1>
+  <h1><a href="#"><%= @vendor.name %></a></h1>
 
-<p>
-  <strong>Price:</strong> $<%= @vendor.price %>
-</p>
+  <p>
+    <strong>Price:</strong> $<%= @vendor.price %>
+  </p>
 
-  <%= image_tag @vendor.img_url %>
+    <%= image_tag @vendor.img_url %>
+  <p>
+    <strong>Location:</strong>
+    <%= @vendor.location %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @vendor.location %>
-</p>
-</div>
-
+<h3>
+<%= link_to 'Resort', resort_path %>
+</h3>
 
 <%= link_to 'Edit', edit_vendor_path(@vendor) %> |
 <%= link_to 'Back', vendors_path %>
+</div>

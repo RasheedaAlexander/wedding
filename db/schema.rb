@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 20160809205207) do
 
   create_table "reservations", force: :cascade do |t|
-    t.integer  "user_id"
     t.integer  "resort_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["resort_id"], name: "index_reservations_on_resort_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160809205207) do
     t.integer  "price"
     t.string   "img_url"
     t.string   "location"
+    t.string   "site_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160809205207) do
     t.integer  "price"
     t.string   "img_url"
     t.string   "location"
+    t.string   "site_url"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
