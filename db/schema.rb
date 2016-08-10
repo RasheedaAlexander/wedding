@@ -14,11 +14,11 @@ ActiveRecord::Schema.define(version: 20160809205207) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "resort_id"
-    t.integer  "user_id"
+    t.integer  "vendor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["resort_id"], name: "index_reservations_on_resort_id"
-    t.index ["user_id"], name: "index_reservations_on_user_id"
+    t.index ["vendor_id"], name: "index_reservations_on_vendor_id"
   end
 
   create_table "resorts", force: :cascade do |t|
@@ -54,10 +54,10 @@ ActiveRecord::Schema.define(version: 20160809205207) do
     t.string   "img_url"
     t.string   "location"
     t.string   "site_url"
-    t.integer  "user_id"
+    t.integer  "resort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_vendors_on_user_id"
+    t.index ["resort_id"], name: "index_vendors_on_resort_id"
   end
 
 end

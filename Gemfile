@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.2'
 #Add authentication with devise
 gem 'devise'
 
+#Add weather
+gem 'wunderground'
+
 #Add normalize.css
 gem 'normalize-rails'
 

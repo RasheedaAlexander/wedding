@@ -62,13 +62,22 @@ class ResortsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_resort
-      @resort = Resort.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_resort
+    @resort = Resort.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def resort_params
-      params.fetch(:resort).permit(:name, :price, :img_url, :location, :site_url, :user_id)
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def resort_params
+    params.fetch(:resort).permit(:name, :price, :img_url, :location, :site_url, :user_id)
+  end
+
+  def get_weather
+    if params[:city] && params[:state]
+      @forecast = Forecast.new(params[:city], params[:state])
+    else
+      @forecast = Forecast.new("washington", "dc")
     end
+  end
+  
 end
