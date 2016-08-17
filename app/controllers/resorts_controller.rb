@@ -1,6 +1,6 @@
 class ResortsController < ApplicationController
   before_action :set_resort, only: [:show, :edit, :update, :destroy]
-
+  # this looks scaffolded. Please make sure you understand what scaffold is doing before you use it. Additionally most developers will never use scaffold because its just that. Its great for just CRUD, but developers will usually change all that up with their own custom actions.
   # GET /resorts
   # GET /resorts.json
   def index
@@ -79,5 +79,5 @@ class ResortsController < ApplicationController
       @forecast = Forecast.new("washington", "dc")
     end
   end
-  
+
 end

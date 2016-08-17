@@ -1,6 +1,6 @@
 class VendorsController < ApplicationController
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
-
+  # see comments about scaffolding
   # GET /vendors
   # GET /vendors.json
   def index

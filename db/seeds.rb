@@ -8,6 +8,7 @@
 
 require 'open-uri'
 require 'json'
+# curious what this is doing in the seed file? this seems like logic you would want at the time of invocation since its real time weather data
 open('http://api.wunderground.com/api/31aaa42778efd46e/geolookup/conditions/q/IA/Cedar_Rapids.json') do |f|
   json_string = f.read
   parsed_json = JSON.parse(json_string)
@@ -15,7 +16,6 @@ open('http://api.wunderground.com/api/31aaa42778efd46e/geolookup/conditions/q/IA
   temp_f = parsed_json['current_observation']['temp_f']
   print "Current temperature in #{location} is: #{temp_f}\n"
 end
-
 Vendor.destroy_all
 Resort.destroy_all
 User.destroy_all
@@ -35,6 +35,7 @@ we = User.create({email: "we@gmail.com", password: "password"})
 # me_getting_married = Reservation.create({user: "me@gmail.com", resort: fowl_cay})
 # we_getting_married = Resevation.create({user:"we@gmail.com", resort: breezes_resort})
 
+# based on the seed file, it'd be cool if you had a locations model, and vendors and resorts were associated with those locations
 Vendor.create ([
   {name: "Flower Company 1", price: 7000, img_url: "http://2.bp.blogspot.com/-nDY61SK1ZwE/Us2HuC4o1yI/AAAAAAAAhlI/RmlK6gCUEzY/s1600/wedding-centerpiece-ideas-14.jpg", location: "Oranjestad, Aruba", site_url: "https://www.1800flowers.com/"},
   {name: "Dress Maker 1", price: 6000, img_url: "http://www.jordannaregan.com.au/wp-content/uploads/2012/08/jr.jpg", location: "Oranjestad, Aruba", site_url: "http://www.davidsbridal.com/"},
